@@ -1,0 +1,58 @@
+:root {
+    --global-color-primary: #1e88e5;
+    --global-color-secondary: #424242;
+}
+
+body{
+    background-color: #c8dde2;
+   
+}
+
+.row{
+    display:flex;
+    justify-content: center;
+}
+
+.col{
+    float:left;
+    position: relative;
+    width: 10%;
+    padding-bottom : 10%; /* = width for a 1:1 aspect ratio */
+    margin:0%;
+}
+
+.container{
+    margin:10px;
+}
+
+.logo{
+    margin: 15px;
+    width:15%;
+}
+
+.block {
+    position:absolute;
+    outline-offset: 0px;
+    outline-style: solid;
+    outline-color: var(--global-color-primary);
+    outline-width: 0px;
+    z-index: 1;
+    box-shadow: 0px 0px 0px var(--global-color-secondary);
+    transition: all .2s ease-in-out;
+}
+
+.block.hover {
+    outline-offset: -5px;
+    outline-width: 5px;
+    box-shadow: 5px 5px 10px var(--global-color-secondary);
+    transform: scale(1.1);
+}
+
+.modal {
+    position: absolute; 
+    z-index: 1; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(255, 255, 255, 0.8); 
+  }
+  
