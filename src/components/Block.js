@@ -9,10 +9,10 @@ function Block(props) {
     (node) => {
       //Scroll to selected element
       if (node !== null && props.properties.selected) {
-        let imageTop = node.getBoundingClientRect().top;
+        let imageTop = node.offsetTop + node.offsetParent.offsetTop;
         let imageHeight = node.getBoundingClientRect().height;
         window.scrollTo({
-          top: imageTop + imageHeight * 0.5,
+          top: imageTop - imageHeight * 0.5,
           behavior: "smooth",
         });
       }
